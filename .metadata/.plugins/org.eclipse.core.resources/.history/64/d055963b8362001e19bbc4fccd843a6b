@@ -1,0 +1,39 @@
+package ex06;
+
+import java.util.function.Function;
+
+//Function<T, R>	T -> R	R apply(T t)
+
+
+interface Arr{
+	int sumArr(int[] arr);
+}
+
+class ssss implements Arr{
+
+	@Override
+	public int sumArr(int[] arr) {
+		int sum = 0;
+		for(int i : arr)
+			sum+=i;
+		return sum;
+	}
+	
+}
+
+
+public class Lambda9_2 {	
+	public static void main(String[] args) {
+		Function<Integer, Integer> f1 =
+				(Integer t)-> {
+				int sum = 0;
+				for(int i : t)
+					sum+=i;
+				return sum;
+			};
+		int[] t = {1,2,3,4,5};
+		int result = f1.apply(null);
+		System.out.println(result);
+
+	}
+}

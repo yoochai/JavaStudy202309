@@ -1,0 +1,49 @@
+package ex02;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+class PriceInfo{
+	private String model;
+	private int price;
+	
+	public PriceInfo(String model, int price) {
+		this.model = model;
+		this.price = price;
+	}
+	public int getPrice() {return price;}
+	public String getmodel() {return model;}
+}
+
+
+
+
+public class StreamExam02 {
+
+	public static void main(String[] args) {
+		List<PriceInfo> lists = new ArrayList<PriceInfo>();
+		lists.add(new PriceInfo("Toy",500));
+		lists.add(new PriceInfo("Robot",1500));
+		lists.add(new PriceInfo("Box",700));
+		lists.add(new PriceInfo("아이스티",400));
+		lists.add(new PriceInfo("아메리카노",1500));
+		lists.add(new PriceInfo("라떼",2000));
+		int sum = lists.stream().filter(a->a.getmodel().length()>4).mapToInt(b->b.getPrice()).sum();
+		System.out.println(sum);
+		
+		System.out.println("--------------------------------");
+		lists.stream().filter(a->a.getmodel().length()>4).map(b->b.getmodel()).forEach(c->System.out.println(c));
+		
+		
+		/*
+		 * 0. List 데이터 3개 추가
+		 * 1. PriceInfo 클래스 멤버변수 model getter 생성
+		 * 2. 필터링 조건 : model이 참조하는 문자열 길이가 4이상이면 해당 인스턴스 통과
+		 * 3. 맵핑 방법 : PriceInfo 인스턴스 -> String 인스턴스(모델링)
+		 * 4. forEach로 2,3 조건 만족하는 인스턴스만 출력
+		 * */
+
+	}
+
+}

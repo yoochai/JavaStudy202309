@@ -1,0 +1,18 @@
+package ex00;
+
+public class ㅁㅁㅁㅁ {
+
+	public static void main(String[] args) {
+		numbers = []
+		for i in range(5):
+		    number = int(input(f"{i+1}번째 숫자를 입력하세요: "))
+		    numbers.append(number)
+
+		numbers.sort()
+
+		
+		for i in range(1, 6):
+		    print(" " * (5 - i) + "*" * (2 * i - 1))
+	}
+
+}

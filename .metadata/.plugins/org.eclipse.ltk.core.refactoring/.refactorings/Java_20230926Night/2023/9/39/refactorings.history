@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;night4&apos; to &apos;night04&apos;&#x0D;&#x0A;- Original project: &apos;Java_20230926Night&apos;&#x0D;&#x0A;- Original element: &apos;Java_20230926Night/src/night4&apos;&#x0D;&#x0A;- Renamed element: &apos;Java_20230926Night/src/night04&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;night4&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;night4" name="night04" qualified="false" references="true" stamp="1695723936377" textual="false" version="1.0"/>
+</session>

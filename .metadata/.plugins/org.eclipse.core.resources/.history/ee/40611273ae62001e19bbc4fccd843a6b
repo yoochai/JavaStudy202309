@@ -1,0 +1,40 @@
+package ex00;
+
+import java.util.Scanner;
+
+public class TrianglePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 5개의 숫자를 입력받습니다.
+        int[] numbers = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.print((i + 1) + "번째 숫자를 입력하세요: ");
+            numbers[i] = scanner.nextInt();
+        }
+
+        // 입력받은 숫자들을 오름차순으로 정렬합니다.
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4 - i; j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+
+        // 삼각형을 출력합니다.
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 5 - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}

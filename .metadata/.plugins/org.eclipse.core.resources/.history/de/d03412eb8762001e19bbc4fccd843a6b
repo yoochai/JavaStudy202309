@@ -1,0 +1,32 @@
+package ex06;
+
+import java.util.function.Predicate;
+
+
+public class Lambda10 {	
+	public static void main(String[] args) {
+		Predicate<Integer> pd = new Predicate<Integer>() {
+
+			public boolean test(Integer t) {
+				if(t%2 == 0)
+					return true;
+				else
+					return false;
+			}
+		};
+			
+		boolean result = pd.test(100007);
+		System.out.println(result);
+		
+		
+		Predicate<Integer> pd2 = t -> {
+				if(t%2 == 0)
+					return true;
+				else
+					return false;
+			};
+			
+		result = pd2.test(100008);
+		System.out.println(result);
+	}
+}

@@ -1,0 +1,18 @@
+package ex06;
+
+import java.util.function.Consumer;
+
+public class Lambda7_2 {	
+	public static void main(String[] args) {
+		
+		Consumer<Integer> con = new Consumer<Integer>() {
+
+			@Override
+			public void accept(Integer aa) {
+			}
+			
+		};
+			
+			
+		};
+	}

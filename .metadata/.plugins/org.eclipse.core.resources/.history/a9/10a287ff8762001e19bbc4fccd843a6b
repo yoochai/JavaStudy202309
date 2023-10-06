@@ -1,0 +1,35 @@
+package ex06;
+
+import java.util.function.Predicate;
+
+
+public class Lambda10 {	
+	public static void main(String[] args) {		
+		Predicate<Integer> pd = t -> {
+				if(t%2 == 0)
+					return true;
+				else
+					return false;
+			};
+			
+		boolean result = pd.test(100008);
+		System.out.println(result);
+		System.out.println("-------------------");
+		
+		
+		Predicate<Integer> pp = new Predicate<Integer>() {
+			
+			@Override
+			public boolean test(Integer x) {
+				System.out.println(x + " : ");
+				return x%2==0;
+			}
+		};
+		
+		boolean flag = pp.test((int)(Math.random()*100));
+		
+		String msg = flag == true? "짝수" : "홀수" ;
+		
+		System.out.print(msg);
+	}
+}

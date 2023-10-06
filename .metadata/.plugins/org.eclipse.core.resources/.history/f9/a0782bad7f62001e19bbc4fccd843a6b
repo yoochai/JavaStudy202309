@@ -1,0 +1,14 @@
+package ex06;
+
+import java.util.function.Function;
+
+public class Lambda8_2 {	
+	public static void main(String[] args) {
+		Function<Integer, Integer> f1 = (Integer)->(int)(Math.random()*6);
+			
+		int aa = f1.apply(null);
+		System.out.println(aa);
+			
+			
+	}
+}

@@ -1,0 +1,13 @@
+package ex06;
+
+interface Var{
+	void printVar(String name, int i);
+}
+
+public class Lambda6 {	
+	public static void main(String[] args) {
+		Var var = 
+				(name, i) ->System.out.println(name + "=" + i);
+		var.printVar("김윤찬", 10);
+	}
+}

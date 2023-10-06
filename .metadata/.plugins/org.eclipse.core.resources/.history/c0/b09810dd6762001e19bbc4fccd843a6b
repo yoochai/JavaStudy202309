@@ -1,0 +1,15 @@
+package ex06;
+
+interface Square{
+	int square(int x);
+}
+
+public class Lambda7 {	
+	public static void main(String[] args) {
+		Square sq = (x)-> x * x;
+		
+		System.out.println(sq);
+			
+			
+		};
+	}

@@ -1,0 +1,9 @@
+package ex01;
+
+public class MemberInnerClass {
+
+	public static void main(String[] args) {
+
+	}
+
+}
